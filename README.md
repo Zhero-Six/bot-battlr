@@ -1,6 +1,6 @@
 # Bot Battlr
 
-Bot Battlr is a single-page React application built with Vite and Bun, designed to allow users to browse a list of bots, enlist them into a custom army, release them, or permanently discharge them. The app fetches bot data from a `json-server` backend and provides a clean, interactive, and responsive user interface. This project demonstrates React components, props, state management, event handling, and data fetching with a modern development stack.
+Welcome to **Bot Battlr**, the one and only spot in the known universe where you can custom build your own Bot Army! This single-page React application, built with Vite and Bun, allows users to browse a list of robots, view their details, and enlist them into a galactic army. The app fetches bot data from a `json-server` backend and provides a clean, interactive interface with sorting, filtering, and bot management features.
 
 ## Table of Contents
 - [Features](#features)
@@ -14,12 +14,20 @@ Bot Battlr is a single-page React application built with Vite and Bun, designed 
 - [License](#license)
 
 ## Features
-- **Browse Bots**: View a grid of all available bots with details including name, class, health, damage, armor, and avatar.
-- **Enlist Bots**: Click a bot card to add it to your army. Each bot can be enlisted only once and remains in the bot collection.
-- **Release Bots**: Click a bot in your army to remove it, returning it to the available pool without deleting it.
+### Core Deliverables
+- **Browse Bots**: View profiles of all bots in a grid (`BotCollection`), with details like name, class, health, damage, and armor.
+- **View Bot Specs**: Click a bot card to see its detailed specs (`BotSpecs`), including catchphrase and creation dates.
+- **Enlist Bots**: Enlist a bot into your army (`YourBotArmy`) from the `BotSpecs` view. Bots are removed from `BotCollection` upon enlisting.
+- **Release Bots**: Remove a bot from your army by clicking its card in `YourBotArmy`. The bot returns to `BotCollection`.
 - **Discharge Bots**: Permanently delete a bot from the backend and army using a red "x" button.
 - **Responsive Design**: A clean, grid-based layout that works on various screen sizes.
-- **Error Handling**: Robust handling of API errors to ensure a stable user experience.
+
+### Advanced Deliverables
+- **Bot Specs View**: Clicking a bot card shows a detailed view (`BotSpecs`) with options to go back or enlist the bot.
+- **Sort Bots**: Sort bots by health, damage, or armor using the `SortBar` component.
+- **Filter Bots**: Filter bots by class (`Support`, `Medic`, `Assault`, `Defender`, `Captain`, `Witch`) using the `BotFilter` component, with support for multiple filters.
+- **Class Restrictions**: Only one bot per class can be enlisted in your army.
+- **Remove on Enlist**: Enlisted bots are removed from `BotCollection` and added to `YourBotArmy`.
 
 ## Technologies Used
 - **Frontend**:
@@ -40,31 +48,3 @@ Follow these steps to set up and run the Bot Battlr application locally.
 - **Bun**: Install Bun by following the instructions at [bun.sh](https://bun.sh/).
   ```bash
   curl -fsSL https://bun.sh/install | bash
-
- Project Overview
-Bot Battlr is a single-page React application that allows users to:
-View a list of bots (BotCollection).
-
-Add a bot to their army (YourBotArmy), ensuring it’s enlisted only once.
-
-Release a bot from the army.
-
-Permanently discharge a bot (delete from backend and frontend).
-
-(Optional advanced deliverables: Bot details view, sorting, filtering, and class limits.)
-
-bot-battlr/
-├── public/
-│   ├── favicon.ico
-├── src/
-│   ├── components/
-│   │   ├── BotCollection.jsx
-│   │   ├── YourBotArmy.jsx
-│   │   ├── BotCard.jsx
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── styles.css
-├── db.json
-├── README.md
-├── package.json
-├── vite.config.js # bot-battlr

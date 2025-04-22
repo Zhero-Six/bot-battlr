@@ -1,15 +1,16 @@
-function BotCollection({ bots, onAddToArmy }) {
-    return (
-      <div className="bot-collection">
-        <h2>Available Bots</h2>
-        <div className="bot-grid">
-          {bots.map((bot) => (
-            <BotCard key={bot.id} bot={bot} onClick={() => onAddToArmy(bot)} />
-          ))}
-        </div>
+import BotCard from './BotCard';
+
+function BotCollection({ bots, onViewBot }) {
+  return (
+    <div className="bot-collection">
+      <h2>Available Bots</h2>
+      <div className="bot-grid">
+        {bots.map((bot) => (
+          <BotCard key={bot.id} bot={bot} onClick={() => onViewBot(bot)} />
+        ))}
       </div>
-    );
-  }
-  
-  export default BotCollection;
-  
+    </div>
+  );
+}
+
+export default BotCollection;

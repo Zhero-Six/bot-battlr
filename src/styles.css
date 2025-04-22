@@ -19,7 +19,11 @@ h1 {
   margin-bottom: 20px;
 }
 
-.bot-collection, .your-bot-army {
+.bot-collection,
+.your-bot-army,
+.bot-specs,
+.sort-bar,
+.bot-filter {
   margin: 20px 0;
 }
 
@@ -48,20 +52,76 @@ h1 {
   border-radius: 5px;
 }
 
-.bot-card button {
-  margin-top: 10px;
+.bot-card button,
+.bot-specs button {
+  margin: 5px;
   padding: 5px 10px;
-  background-color: #ff4d4d;
-  color: white;
   border: none;
   border-radius: 3px;
   cursor: pointer;
 }
 
-.bot-card button:hover {
+.bot-card button.discharge {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.bot-card button.discharge:hover {
   background-color: #cc0000;
 }
 
-.your-bot-army h2, .bot-collection h2 {
+.bot-specs {
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.bot-specs img {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.bot-specs button.back {
+  background-color: #ccc;
+}
+
+.bot-specs button.enlist {
+  background-color: #28a745;
+  color: white;
+}
+
+.bot-specs button:hover {
+  opacity: 0.8;
+}
+
+.sort-bar,
+.bot-filter {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sort-bar button,
+.bot-filter label {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.sort-bar button:hover {
+  background-color: #f0f0f0;
+}
+
+.bot-filter label input {
+  margin-right: 5px;
+}
+
+.your-bot-army h2,
+.bot-collection h2,
+.bot-specs h2 {
   margin-bottom: 10px;
 }
